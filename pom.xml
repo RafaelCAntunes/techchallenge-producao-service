@@ -23,7 +23,7 @@
     <cucumber.version>7.14.0</cucumber.version>
 
 
-    <sonar.projectKey>RafaelCAntunes_techchallenge-pedido-service</sonar.projectKey>
+    <sonar.projectKey>RafaelCAntunes_techchallenge-producao-service</sonar.projectKey>
     <sonar.organization>rafaelcantunes</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.sources>src/main/java</sonar.sources>
