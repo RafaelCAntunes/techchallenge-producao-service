@@ -45,18 +45,6 @@ data "terraform_remote_state" "db" {
   }
 }
 
-data "terraform_remote_state" "pedido" {
-  backend = "remote"
-
-  config = {
-    organization = "techchallenge-lanchonete"
-    workspaces = {
-      name = "techchallenge-pedido-service"
-    }
-  }
-}
-
-
 data "aws_eks_cluster" "cluster" {
   name = data.terraform_remote_state.eks.outputs.cluster_name
 }

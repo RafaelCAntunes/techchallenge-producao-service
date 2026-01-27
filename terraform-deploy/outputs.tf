@@ -12,6 +12,5 @@ output "deployment_info" {
       name     = kubernetes_deployment.producao.metadata[0].name
       replicas = kubernetes_deployment.producao.spec[0].replicas
     }
-  }
   description = "Informações do deployment"
 }
