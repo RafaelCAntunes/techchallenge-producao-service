@@ -45,7 +45,7 @@ resource "kubernetes_deployment" "producao" {
           # URLs do pedido
           env {
             name  = "PEDIDOS_SERVICE_URL"
-            value = "http://pedidos-service:8080"
+            value = data.terraform_remote_state.pedido.outputs.service_hostname
           }
 
           env {
