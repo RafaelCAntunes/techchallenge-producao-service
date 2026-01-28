@@ -16,17 +16,17 @@ import java.util.stream.Collectors;
 @RequestMapping("/producao")
 public class ProducaoController {
 
-    private final IniciarProducaoUseCase iniciarUseCase;
+    private final IniciarProducaoUseCase iniciarProducaoUseCase;
     private final AtualizarStatusProducaoUseCase atualizarStatusUseCase;
     private final ListarFilaProducaoUseCase listarFilaUseCase;
     private final ConsultarStatusProducaoUseCase consultarStatusUseCase;
 
     public ProducaoController(
-            IniciarProducaoUseCase iniciarUseCase,
+            IniciarProducaoUseCase iniciarProducaoUseCase,
             AtualizarStatusProducaoUseCase atualizarStatusUseCase,
             ListarFilaProducaoUseCase listarFilaUseCase,
             ConsultarStatusProducaoUseCase consultarStatusUseCase) {
-        this.iniciarUseCase = iniciarUseCase;
+        this.iniciarProducaoUseCase = iniciarProducaoUseCase;
         this.atualizarStatusUseCase = atualizarStatusUseCase;
         this.listarFilaUseCase = listarFilaUseCase;
         this.consultarStatusUseCase = consultarStatusUseCase;
@@ -43,7 +43,7 @@ public class ProducaoController {
                 ))
                 .collect(java.util.stream.Collectors.toList());
 
-        iniciarUseCase.executar(request.getPedidoId().toString(), itens);
+        iniciarProducaoUseCase.executar(request.getPedidoId().toString(), itens);
 
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
