@@ -13,7 +13,7 @@ public class ItemProducaoEntity {
     private Long timestamp;
     private String statusProducao;
     private Long iniciadoEm;
-    private List<ItemPedido> itens;
+    private List<ItemPedidoEntity> itens;
     private Long atualizadoEm;
 
     @DynamoDbPartitionKey
@@ -34,8 +34,8 @@ public class ItemProducaoEntity {
     }
 
     @DynamoDbAttribute("itens")
-    public List<ItemPedido> getItens() { return itens; }
-    public void setItens(List<ItemPedido> itens) { this.itens = itens; }
+    public List<ItemPedidoEntity> getItens() { return itens; }
+    public void setItens(List<ItemPedidoEntity> itens) { this.itens = itens; }
 
 
     @DynamoDbAttribute("iniciadoEm")
