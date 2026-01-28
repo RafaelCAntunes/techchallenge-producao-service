@@ -8,9 +8,11 @@ output "service_hostname" {
 
 
 output "deployment_info" {
+  value = {
     producao = {
       name     = kubernetes_deployment.producao.metadata[0].name
       replicas = kubernetes_deployment.producao.spec[0].replicas
     }
+  }
   description = "Informações do deployment"
 }
