@@ -1,9 +1,7 @@
 package com.lanchonete.producao.application;
 
 import com.lanchonete.producao.domain.*;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class AtualizarStatusProducaoUseCase {
 
     private final ProducaoRepositoryPort repository;
